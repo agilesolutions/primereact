@@ -1,0 +1,7 @@
+**/.classpath
+**/.project
+**/.settings
+**/build.bat
+**/target
+**/node_modules
+**/bin/
