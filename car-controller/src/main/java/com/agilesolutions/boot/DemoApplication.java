@@ -20,7 +20,6 @@ public class DemoApplication {
 	@Autowired
 	private CarRepository carRepository;
 
-
 	private static final Logger logger = LoggerFactory.getLogger(CarController.class);
 	
 	public static void main(String[] args) {

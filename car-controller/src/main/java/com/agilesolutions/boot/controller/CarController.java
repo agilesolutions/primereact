@@ -47,9 +47,6 @@ public class CarController {
     @Value("${spring.application.version}")
     private String version;
 
-    @Value("${spring.application.environment}")
-    private String environment;
-
 	@GetMapping("/cars")
 	public ResponseEntity<Iterable<Car>> getCars(@NotNull Authentication auth) {
 
@@ -125,12 +122,14 @@ public class CarController {
 
 		logger.info("Fetching average price per brand and year {}", kv("type", "ATL"));
 
-		try {
-			return new ResponseEntity<Iterable<CarGraph>>(repository.getAverageByBrand(), HttpStatus.OK);
-		} catch (Exception e) {
-			logger.info("Exceptin while fetching vehicle graph", kv("type", "SAL"));
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+//		try {
+//			return new ResponseEntity<Iterable<CarGraph>>(repository.getAverageByBrand(), HttpStatus.OK);
+//		} catch (Exception e) {
+//			logger.info("Exceptin while fetching vehicle graph", kv("type", "SAL"));
+//			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+//		}
+		return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+
 	}
 
 	@GetMapping(value = "/version")
@@ -138,8 +137,6 @@ public class CarController {
 	public String showVersion() {
 
 		logger.info("Running version {} of Demo application", version, kv("type", "SAL"));
-
-		logger.info("Running Demo application in environment {}", environment, kv("type", "SAL"));
 
 		return version;
 	}

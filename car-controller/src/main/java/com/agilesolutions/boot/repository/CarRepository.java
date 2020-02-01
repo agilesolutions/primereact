@@ -19,7 +19,7 @@ public interface CarRepository extends CrudRepository <Car, Long> {
 	List<Car> findByColor(@Param("color") String color);
 
 	// Fetch statisticy by brand
-	@Query(value = "SELECT NEW com.agilesolutions.boot.model.CarGraph(brand, year, avg(price)) from Car group by brand,year")
-	List<CarGraph> getAverageByBrand();
+//	@Query(value = "SELECT NEW com.agilesolutions.boot.model.CarGraph(brand, year, avg(price)) from Car group by brand,year")
+//	List<CarGraph> getAverageByBrand();
 	
 }
