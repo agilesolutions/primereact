@@ -21,6 +21,7 @@
 	<properties>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+		<testcontainers.version>1.10.6</testcontainers.version>
 	</properties>
 
 	<dependencyManagement>
@@ -82,25 +83,11 @@
 		</dependency>
 
 
-        <!-- JUnit Jupiter dependencies -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- JUnit platform launcher -->
-        <!-- To be able to run tests from IDE directly -->
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-launcher</artifactId>
-            <version>1.6.0</version>
-            <scope>test</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
