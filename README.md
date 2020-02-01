@@ -23,7 +23,7 @@ Following a kind of MVC pattern you will see..
 
 * [How to configure Flyway database migrations](https://dev.to/gabriela/spring-boot-rest-api-and-flyway-migrations-a3a)
 * [The flyway plugin](https://flywaydb.org/documentation/maven/)
-* []()
+* [baeldung](https://www.baeldung.com/database-migrations-with-flyway)
 * []()
 
 ## Testing
