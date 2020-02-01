@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `employee` (
+CREATE TABLE IF NOT EXISTS `car` (
 
 `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `brand` varchar(20),
