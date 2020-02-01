@@ -31,6 +31,11 @@ Following a kind of MVC pattern you will see..
 * [Expained](https://www.baeldung.com/spring-boot-testing)
 * [Examples](https://github.com/eugenp/tutorials/tree/master/spring-boot)
 
+## Run
+
+```
+mvn spring-boot:run -Dspring-boot.run.profiles=prod
+```
 
 ## References and docus
 
