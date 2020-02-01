@@ -24,7 +24,9 @@ Following a kind of MVC pattern you will see..
 * [How to configure Flyway database migrations](https://dev.to/gabriela/spring-boot-rest-api-and-flyway-migrations-a3a)
 * [The flyway plugin](https://flywaydb.org/documentation/maven/)
 * [baeldung](https://www.baeldung.com/database-migrations-with-flyway)
-* []()
+* [Best till now](https://www.callicoder.com/spring-boot-flyway-database-migration-example/)
+* [Best H2 docs](https://www.devglan.com/spring-boot/spring-boot-h2-database-example)
+* [DDL and H2](https://howtodoinjava.com/spring-boot2/h2-database-example/)
 
 ## Testing
 

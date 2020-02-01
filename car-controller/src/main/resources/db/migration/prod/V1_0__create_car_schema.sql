@@ -1,13 +1,15 @@
-CREATE TABLE IF NOT EXISTS car (
+DROP TABLE IF EXISTS CAR;
 
-id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-brand varchar(20),
-model varchar(50),
-color varchar(50),
-price int,
-year int
-
-)ENGINE=InnoDB DEFAULT CHARSET=UTF8; 
+CREATE SEQUENCE group_seq;
+  
+CREATE TABLE CAR (
+  id BIGINT  default group_seq.nextval PRIMARY KEY,
+  brand VARCHAR(250) NOT NULL,
+  model VARCHAR(250) NOT NULL,
+  color VARCHAR(250) NOT NULL,
+  price INT NOT NULL,
+  year INT NOT NULL
+  );
 
 INSERT INTO car VALUES (12,'volvo','ultimate','red',13000,2010);
 INSERT INTO car VALUES (13,'volvo','ultimate','red',13000,2010);
