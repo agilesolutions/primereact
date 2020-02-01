@@ -33,9 +33,9 @@ public class DemoApplication {
 
 			logger.info("Added owners",  kv("type", "SAL"));
 
-			carRepository.save(new Car("Ford", "Mustang", "Red", 2017, 59000));
-			carRepository.save(new Car("Nissan", "Leaf", "White", 2014, 29000));
-			carRepository.save(new Car("Toyota", "Prius", "Silver", 2018, 39000));
+//			carRepository.save(new Car("Ford", "Mustang", "Red", 2017, 59000));
+//			carRepository.save(new Car("Nissan", "Leaf", "White", 2014, 29000));
+//			carRepository.save(new Car("Toyota", "Prius", "Silver", 2018, 39000));
 			logger.info("Added owners",  kv("type", "SAL"));
 
 		};
