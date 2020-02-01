@@ -30,6 +30,8 @@ Following a kind of MVC pattern you will see..
 
 * [Expained](https://www.baeldung.com/spring-boot-testing)
 * [Examples](https://github.com/eugenp/tutorials/tree/master/spring-boot)
+* [Guide to testing RestTemplate and hamcrast](https://www.baeldung.com/rest-template)
+* [The best GITHUB on this you can find](https://github.com/eugenp/tutorials/tree/master/spring-resttemplate)
 
 ## Run
 

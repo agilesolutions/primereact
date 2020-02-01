@@ -1,15 +1,15 @@
 package com.agilesolutions.boot.controller;
 
+import static org.junit.Assert.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.hamcrest.CoreMatchers.*;
 
-import static org.junit.Assert.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -26,11 +26,6 @@ public class CarControllerTest {
 
 	@Autowired
 	private TestRestTemplate restTemplate;	
-	
-	private String getRootUrl() {
-        return "http://localhost:8080/api/v1";
-    }
-
 
 	@Test
 	public void testShowVersion() throws Exception {
@@ -41,8 +36,11 @@ public class CarControllerTest {
 	
 	 @Test
 	    public void testGetcars() throws Exception {
-	        ResponseEntity<Car> postResponse = restTemplate.getForEntity("http://localhost:8080/api/Car/1", Car.class);
-	        assertNotNull(postResponse);
-	        assertNotNull(postResponse.getBody());
+		 
+		 Car car = restTemplate
+				  .getForObject("http://localhost:8080/api/Car/1", Car.class);
+				assertThat(car.getBrand(), notNullValue());
+				assertThat(car.getId(), is(1L));
+		 
 	    }
 }
