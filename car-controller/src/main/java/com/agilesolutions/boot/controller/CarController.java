@@ -25,6 +25,8 @@ import com.agilesolutions.boot.model.Car;
 import com.agilesolutions.boot.model.CarGraph;
 import com.agilesolutions.boot.repository.CarRepository;
 
+import io.swagger.annotations.ApiOperation;
+
 /**
  * 
  * @author u24279
@@ -38,28 +40,34 @@ public class CarController {
 	private CarRepository repository;
 
 	private static final Logger logger = LoggerFactory.getLogger(CarController.class);
-	
+
 	@Value("${backend.url}")
 	private String endpoint;
+	
+    @Value("${spring.application.version}")
+    private String version;
+
+    @Value("${spring.application.environment}")
+    private String environment;
 
 	@GetMapping("/cars")
-	public  ResponseEntity<Iterable<Car>>  getCars(@NotNull Authentication auth) {
+	public ResponseEntity<Iterable<Car>> getCars(@NotNull Authentication auth) {
 
 		ResponseEntity<List<Car>> response = null;
 		try {
-			logger.info("Fetching cars",  kv("type", "ATL"));
-			
+			logger.info("Fetching cars", kv("type", "ATL"));
+
 //			RestTemplate restTemplate = new RestTemplate();
 //			
 //			ResponseEntity<List<Car>> result = restTemplate.exchange(endpoint, HttpMethod.GET, null, new ParameterizedTypeReference<List<Car>>() {});
 //			
 //			return new ResponseEntity<>(repository.findAll(), HttpStatus.OK);
-			
+
 			return new ResponseEntity<>(repository.findAll(), HttpStatus.OK);
-			
+
 		} catch (Exception e) {
-			logger.error("Error fetching cars with {}", e.getMessage(),  kv("type", "EXL"));
-			
+			logger.error("Error fetching cars with {}", e.getMessage(), kv("type", "EXL"));
+
 			return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
@@ -67,15 +75,14 @@ public class CarController {
 
 	@PostMapping("/cars")
 	public ResponseEntity<Car> addCar(@RequestBody Car car) {
-		
-		logger.info("Adding vehicle {}", car.getBrand(),  kv("type", "SAL"));
 
+		logger.info("Adding vehicle {}", car.getBrand(), kv("type", "SAL"));
 
 		try {
-			return  new ResponseEntity<Car>(repository.save(car),HttpStatus.OK);      
+			return new ResponseEntity<Car>(repository.save(car), HttpStatus.OK);
 		} catch (Exception e) {
-			logger.error("Exceptin while adding vehicle {}", car.getBrand(),  kv("type", "EXL"));
-			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);  
+			logger.error("Exceptin while adding vehicle {}", car.getBrand(), kv("type", "EXL"));
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
 	}
@@ -83,52 +90,58 @@ public class CarController {
 	@DeleteMapping("/cars/{id}")
 	public ResponseEntity<String> deleteCar(@PathVariable Long id) {
 
-		logger.info("Removing vehicle with id {}", id,  kv("type", "SAL"));
-		
+		logger.info("Removing vehicle with id {}", id, kv("type", "SAL"));
+
 		try {
 			repository.deleteById(id);
-			
-			return  new ResponseEntity<String>("Car removed successfully",HttpStatus.OK);      
+
+			return new ResponseEntity<String>("Car removed successfully", HttpStatus.OK);
 		} catch (Exception e) {
-			logger.error("Excpeption occured while removing vehicle with id {}", id,  kv("type", "EXL"));
-			return new ResponseEntity<String>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);  
+			logger.error("Excpeption occured while removing vehicle with id {}", id, kv("type", "EXL"));
+			return new ResponseEntity<String>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
-		
-		
 	}
 
 	// Single item
 
 	@GetMapping("/cars/{id}")
 	public ResponseEntity<Car> fetchCar(@PathVariable Long id) {
-		
-		logger.info("fetching vehicle with id {}", id,  kv("type", "ATL"));
-		
+
+		logger.info("fetching vehicle with id {}", id, kv("type", "ATL"));
+
 		try {
-			return  new ResponseEntity<Car>(repository.findById(id).get(),HttpStatus.OK);      
+			return new ResponseEntity<Car>(repository.findById(id).get(), HttpStatus.OK);
 		} catch (Exception e) {
-			logger.info("Exceptin while fetching vehicle with id {}", id,  kv("type", "SAL"));
-			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);  
+			logger.info("Exceptin while fetching vehicle with id {}", id, kv("type", "SAL"));
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-
-	
 
 	// Single item
 
 	@GetMapping("/cars/graph")
 	public ResponseEntity<Iterable<CarGraph>> fetchCarGrapg() {
-		
+
 		logger.info("Fetching average price per brand and year {}", kv("type", "ATL"));
-		
+
 		try {
-			return  new ResponseEntity<Iterable<CarGraph>>(repository.getAverageByBrand(),HttpStatus.OK);      
+			return new ResponseEntity<Iterable<CarGraph>>(repository.getAverageByBrand(), HttpStatus.OK);
 		} catch (Exception e) {
-			logger.info("Exceptin while fetching vehicle graph",  kv("type", "SAL"));
-			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);  
+			logger.info("Exceptin while fetching vehicle graph", kv("type", "SAL"));
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 
-	
+	@GetMapping(value = "/version")
+	@ApiOperation(value = "Show API application", notes = "Notes on displaying application version")
+	public String showVersion() {
+
+		logger.info("Running version {} of Demo application", version, kv("type", "SAL"));
+
+		logger.info("Running Demo application in environment {}", environment, kv("type", "SAL"));
+
+		return version;
+	}
+
 }
