@@ -38,7 +38,7 @@ Following a kind of MVC pattern you will see..
 ## Run
 
 ```
-mvn spring-boot:run -Dspring-boot.run.profiles=prod
+mvn spring-boot:run  -Dspring-boot.run.profiles=dev
 ```
 
 ## profile

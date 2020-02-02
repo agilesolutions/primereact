@@ -10,10 +10,3 @@ CREATE TABLE CAR (
   price INT NOT NULL,
   year INT NOT NULL
   );
-
-INSERT INTO car VALUES (12,'volvo','ultimate','red',13000,2010);
-INSERT INTO car VALUES (13,'volvo','ultimate','red',13000,2010);
-INSERT INTO car VALUES (14,'volvo','ultimate','red',13000,2010);
-INSERT INTO car VALUES (15,'volvo','ultimate','red',13000,2010);
-INSERT INTO car VALUES (16,'volvo','ultimate','red',13000,2010);
-INSERT INTO car VALUES (17,'volvo','ultimate','red',13000,2010);
