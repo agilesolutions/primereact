@@ -50,6 +50,16 @@ mvn spring-boot:run  -Dspring-boot.run.profiles=dev
 * [port forwarding](https://skaffold.dev/docs/pipeline-stages/port-forwarding/)
 * [Intro to Skaffold for easy Kubernetes development](https://medium.com/flant-com/skaffold-kubernetes-development-tool-2897d6903e02)
 * [Quickstart](https://skaffold.dev/docs/quickstart/)
+* [Kube-context Activation](https://skaffold.dev/docs/environment/kube-context/)
+
+## kubectl
+
+```
+# permanently save the namespace for all subsequent kubectl commands in that context.
+kubectl config set-context --current --namespace=ggckad-s2
+```
+
+* [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration)
 
 
 ## References and docus
