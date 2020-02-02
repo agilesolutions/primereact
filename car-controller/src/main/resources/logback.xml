@@ -16,8 +16,9 @@
 				<message />
 				<loggerName />
 				<context />
-				<provider class="net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider"/>
-				<pattern/>
+				<provider
+					class="net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider" />
+				<pattern />
 				<mdc />
 				<stackTrace>
 					<throwableConverter
@@ -31,10 +32,15 @@
 			</providers>
 		</encoder>
 	</appender>
+
+
 	<root level="INFO">
 		<appender-ref ref="jsonConsoleAppender" />
 	</root>
-	
-	<logger name="org.flywaydb" level="DEBUG"/>
+
+	<logger name="org.flywaydb" level="DEBUG"
+		additivity="true">
+		<appender-ref ref="jsonConsoleAppender" />
+	</logger>
 
 </configuration>

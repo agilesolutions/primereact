@@ -41,6 +41,11 @@ Following a kind of MVC pattern you will see..
 mvn spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
+## profile
+
+* [profiles and property files](https://mkyong.com/spring-boot/spring-boot-profile-based-properties-and-yaml-example/)
+* []()
+
 ## References and docus
 
 * [Getting started with Prime React](https://create-react-app.dev/docs/getting-started)
