@@ -25,8 +25,6 @@ import com.agilesolutions.boot.model.Car;
 import com.agilesolutions.boot.model.CarGraph;
 import com.agilesolutions.boot.repository.CarRepository;
 
-import io.swagger.annotations.ApiOperation;
-
 /**
  * 
  * @author u24279
@@ -133,7 +131,6 @@ public class CarController {
 	}
 
 	@GetMapping(value = "/version")
-	@ApiOperation(value = "Show API application", notes = "Notes on displaying application version")
 	public String showVersion() {
 
 		logger.info("Running version {} of Demo application", version, kv("type", "SAL"));

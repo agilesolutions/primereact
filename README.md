@@ -19,6 +19,20 @@ Following a kind of MVC pattern you will see..
 * [Theming](https://www.primefaces.org/primereact/#/theming)
 * [Theme Designer API - online design your theme](https://www.primefaces.org/designer/primereact)
 
+## OpenApi docs
+
+SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
+
+* [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
+
+```
+http://localhost:8080/api-docs/
+
+http://localhost:8080/api-docs.yaml
+
+http://localhost:8080/swagger-ui
+```
+
 ## flyway
 
 * [How to configure Flyway database migrations](https://dev.to/gabriela/spring-boot-rest-api-and-flyway-migrations-a3a)
