@@ -44,7 +44,13 @@ mvn spring-boot:run  -Dspring-boot.run.profiles=dev
 ## profile
 
 * [profiles and property files](https://mkyong.com/spring-boot/spring-boot-profile-based-properties-and-yaml-example/)
-* []()
+
+## skaffold
+
+* [port forwarding](https://skaffold.dev/docs/pipeline-stages/port-forwarding/)
+* [Intro to Skaffold for easy Kubernetes development](https://medium.com/flant-com/skaffold-kubernetes-development-tool-2897d6903e02)
+* [Quickstart](https://skaffold.dev/docs/quickstart/)
+
 
 ## References and docus
 
