@@ -24,6 +24,8 @@ Following a kind of MVC pattern you will see..
 SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
 
 * [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
+* [Swagger codegen maven plugin](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
+* [Swagger openapi spec](https://swagger.io/specification/)
 
 ```
 http://localhost:8080/api-docs/
@@ -32,6 +34,8 @@ http://localhost:8080/api-docs.yaml
 
 http://localhost:8080/swagger-ui
 ```
+
+
 
 ## flyway
 
