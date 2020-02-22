@@ -26,6 +26,7 @@ SpringDoc — a tool that simplifies the generation and maintenance of API docs, b
 * [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
 * [Swagger codegen maven plugin](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
 * [Swagger openapi spec](https://swagger.io/specification/)
+* [Good post about this on stackoverflow](https://stackoverflow.com/questions/49384545/how-to-generate-client-code-using-with-swagger-codegen-plugin-maven)
 
 ```
 http://localhost:8080/api-docs/
