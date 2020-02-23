@@ -22,6 +22,8 @@
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<swagger3.version>1.1.44</swagger3.version>
+		<generated-sources-path>${project.build.directory}/generated-sources</generated-sources-path>
+		<generated-sources-java-path>main/java</generated-sources-java-path>
 	</properties>
 
 	<dependencyManagement>
@@ -138,18 +140,26 @@
 				<groupId>io.swagger</groupId>
 				<artifactId>swagger-codegen-maven-plugin</artifactId>
 				<version>2.3.1</version>
+				<configuration>
+					<inputSpec>${basedir}/src/main/resources/swagger/api-contracts.yaml</inputSpec>
+					<configOptions>
+						<sourceFolder>${generated-sources-java-path}</sourceFolder>
+					</configOptions>
+					<output>${generated-sources-path}</output>
+				</configuration>
 				<executions>
 					<execution>
-						<id>contract-service</id>
+						<id>generate-swagger-javaclient</id>
 						<phase>none</phase>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<inputSpec>${basedir}/src/main/resources/swagger/api-contracts.yaml</inputSpec>
+
 							<language>spring</language>
-							<modelPackage>com.agilesolutions.boot.rest.v1.model</modelPackage>
-							<apiPackage>com.agilesolutions.boot.rest.v1.api</apiPackage>
+							<modelPackage>${groupId}.rest.client.model</modelPackage>
+							<apiPackage>${groupId}.rest.client.api</apiPackage>
+							<invokerPackage>${groupId}.prozu.client.invoker</invokerPackage>
 						</configuration>
 					</execution>
 				</executions>
