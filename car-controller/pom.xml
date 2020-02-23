@@ -147,7 +147,8 @@
 				<executions>
 					<execution>
 						<id>generate-open-api</id>
-						<phase>generate-sources</phase>
+						<!--  phase>generate-sources</phase-->
+						<phase>none</phase>
 						<goals>
 							<goal>generate</goal>
 						</goals>
