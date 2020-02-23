@@ -19,7 +19,9 @@ Following a kind of MVC pattern you will see..
 * [Theming](https://www.primefaces.org/primereact/#/theming)
 * [Theme Designer API - online design your theme](https://www.primefaces.org/designer/primereact)
 
-## OpenApi docs
+## Managing Client and Server side API's
+
+Synchronizing your client Rest models and server side REST controller with your OpenAPI contracts is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
 
 SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
 
