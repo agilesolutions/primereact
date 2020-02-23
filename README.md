@@ -21,7 +21,7 @@ Following a kind of MVC pattern you will see..
 
 ## Managing Client and Server side API's
 
-Synchronizing your client Rest models and server side REST controller with your OpenAPI contracts is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
+Lining up your client and server-side code with latest state of your API Docs is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
 
 SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
 
