@@ -150,7 +150,8 @@
 				<executions>
 					<execution>
 						<id>generate-swagger-javaclient</id>
-						<phase>generate-sources</phase>
+						<!--  phase>generate-sources</phase-->
+						<phase>none</phase>
 						<goals>
 							<goal>generate</goal>
 						</goals>
@@ -168,7 +169,6 @@
 
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>copy-bundle-js</id>
