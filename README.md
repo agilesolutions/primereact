@@ -21,11 +21,11 @@ Following a kind of MVC pattern you will see..
 
 ## Managing Client and Server side API's
 
-Lining up your client and server-side code with the latest state of your API Docs is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
+Lining up your REST client and server-side code with the latest state of your API Docs is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
 
-The generate maven goal has been switch off and set to none maven lifecycle phase. Only re-generate new API interface and models once you have been notified about contact changes.
+The maven plugin's generate goal has been switch off and set to none maven lifecycle phase. Effectively you only re-generate new API interfaces and models once you have been notified about contact changes.
 
-1. On client side where your RestTemplates reside you typically switch on option generateModels.
+1. On client side where your RestTemplates reside you typically only switch on option generateModels.
 2. On server side where your Rest Controllers reside you typically switch on option generateApi and interfaceOnly and implement that interface on your REST controller implementation class.
 
 ```
