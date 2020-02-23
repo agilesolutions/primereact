@@ -38,7 +38,7 @@ http://localhost:8080/swagger-ui
 ```
 [http://localhost:8080/api-docs.yaml](http://localhost:8080/api-docs.yaml)
 
-open api generate maven goal is deactiveted and set to none maven lifecycle phase. Only generated new API interface once a contract uctually changed with this instruction
+open api generate maven goal is deactiveted and set to none maven lifecycle phase. Only generated new API interface once a contract actually changed with this instruction
 ```
 mvn openapi-generator:generate@update-interface
 ```
