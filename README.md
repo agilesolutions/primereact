@@ -21,9 +21,17 @@ Following a kind of MVC pattern you will see..
 
 ## Managing Client and Server side API's
 
-Lining up your client and server-side code with latest state of your API Docs is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
+Lining up your client and server-side code with the latest state of your API Docs is utilized with [OpenApi generator Maven plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
 
-SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
+The generate maven goal has been switch off and set to none maven lifecycle phase. Only re-generate new API interface and models once you have been notified about contact changes.
+
+1. On client side where your RestTemplates reside you typically switch on option generateModels.
+2. On server side where your Rest Controllers reside you typically switch on option generateApi and interfaceOnly and implement that interface on your REST controller implementation class.
+
+```
+mvn openapi-generator:generate@update-interface
+```
+
 
 * [enriching-restful-services-swagger](https://phauer.com/2015/enriching-restful-services-swagger/)
 * [interface only generation](https://github.com/thomasJoei/swagger-codegen-springboot)
@@ -38,16 +46,12 @@ http://localhost:8080/api-docs/
 http://localhost:8080/swagger-ui
 
 ```
+SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
+
+
 [http://localhost:8080/api-docs.yaml](http://localhost:8080/api-docs.yaml)
 
-open api generate maven goal is deactiveted and set to none maven lifecycle phase. Only generated new API interface once a contract actually changed with this instruction.
 
-1. On client side where your RestTemplates reside you typically switch on option generateModels.
-2. On server side where your Rest Controllers reside you typically switch on option generateApi and interfaceOnly and implement that interface on your REST controller implementation class.
-
-```
-mvn openapi-generator:generate@update-interface
-```
 
 ## flyway
 
