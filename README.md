@@ -4,7 +4,7 @@ PrimeReact aims to make ReactJS development easy to develop, learn, standardize 
 
 * Helps getting a grip on watching on security vulnerabilities, JavaScript libraries come in many shapes and quality and are hard to control. Having one reliable source alike PrimeReact can solve that problem permanently.
 * PrimeReact UI components are expertly engineered, respecting the ground design principles of React like SFC (stateless functional components)
-* Leaving UI engineering to exports, development teams focus their efforts on delivering business solutions.
+* Leaving UI engineering to experts, development teams focus their efforts on delivering business solutions.
 * Provides excellent getting started documentation, speeds up onboarding new developers on projects.
 
 ## About the structure 
@@ -23,10 +23,12 @@ Following a kind of MVC pattern you will see..
 
 SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
 
+" [enriching-restful-services-swagger](https://phauer.com/2015/enriching-restful-services-swagger/)
 * [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
 * [Swagger codegen maven plugin](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
 * [Swagger openapi spec](https://swagger.io/specification/)
 * [Good post about this on stackoverflow](https://stackoverflow.com/questions/49384545/how-to-generate-client-code-using-with-swagger-codegen-plugin-maven)
+
 
 ```
 http://localhost:8080/api-docs/
