@@ -23,7 +23,7 @@ Following a kind of MVC pattern you will see..
 
 SpringDoc — a tool that simplifies the generation and maintenance of API docs, based on the OpenAPI 3 specification
 
-" [enriching-restful-services-swagger](https://phauer.com/2015/enriching-restful-services-swagger/)
+* [enriching-restful-services-swagger](https://phauer.com/2015/enriching-restful-services-swagger/)
 * [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
 * [Swagger codegen maven plugin](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
 * [Swagger openapi spec](https://swagger.io/specification/)
