@@ -146,7 +146,7 @@
 				<version>4.2.3</version>
 				<executions>
 					<execution>
-						<id>generate-open-api</id>
+						<id>update-interface</id>
 						<!--  phase>generate-sources</phase-->
 						<phase>none</phase>
 						<goals>
