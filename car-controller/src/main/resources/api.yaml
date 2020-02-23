@@ -1,0 +1,126 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /api/cars/{id}:
+    get:
+      operationId: fetchCar
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        200:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Car'
+    delete:
+      operationId: deleteCar
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        200:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                type: string
+  /api/cars/graph:
+    get:
+      operationId: fetchCarGrapg
+      responses:
+        200:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                type: object
+  /api/version:
+    get:
+      operationId: showVersion
+      responses:
+        200:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                type: string
+  /api/cars:
+    get:
+      operationId: getCars
+      parameters:
+      - name: auth
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - RSA
+          - DSS
+          - aNULL
+          - DH
+          - ECDH
+          - KRB5
+          - ECDSA
+          - PSK
+          - GOST94
+          - GOST01
+          - FZA
+          - SRP
+          - ANY
+      responses:
+        200:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                type: object
+    post:
+      operationId: addCar
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/Car'
+      responses:
+        200:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Car'
+components:
+  schemas:
+    Car:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        brand:
+          type: string
+        model:
+          type: string
+        color:
+          type: string
+        year:
+          type: integer
+          format: int32
+        price:
+          type: integer
+          format: int32
+

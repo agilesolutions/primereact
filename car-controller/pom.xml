@@ -143,9 +143,7 @@
 			<plugin>
 				<groupId>org.openapitools</groupId>
 				<artifactId>openapi-generator-maven-plugin</artifactId>
-				<!-- RELEASE_VERSION -->
 				<version>4.2.3</version>
-				<!-- /RELEASE_VERSION -->
 				<executions>
 					<execution>
 						<id>generate-open-api</id>
@@ -159,14 +157,12 @@
 							<generatorName>spring</generatorName>
 							<generateApi>True</generateApi>
 							<generateModels>False</generateModels>
-							<generateApiTests>True</generateApiTests>
-							<generateModelTests>True</generateModelTests>
-							<generateSupportingFiles>True</generateSupportingFiles>
+							<generateSupportingFiles>False</generateSupportingFiles>
 							<apiPackage>${project.groupId}.controller</apiPackage>
 							<output>${project.basedir}</output>
 							<configOptions>
 								<sourceFolder>src/main/java</sourceFolder>
-								<interfaceOnly>true</interfaceOnly>
+								<interfaceOnly>True</interfaceOnly>
 							</configOptions>
 						</configuration>
 					</execution>

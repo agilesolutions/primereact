@@ -26,9 +26,8 @@ SpringDoc — a tool that simplifies the generation and maintenance of API docs, b
 * [enriching-restful-services-swagger](https://phauer.com/2015/enriching-restful-services-swagger/)
 * [interface only generation](https://github.com/thomasJoei/swagger-codegen-springboot)
 * [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
-* [Swagger codegen maven plugin](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
-* [Swagger openapi spec](https://swagger.io/specification/)
-* [Good post about this on stackoverflow](https://stackoverflow.com/questions/49384545/how-to-generate-client-code-using-with-swagger-codegen-plugin-maven)
+* [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
+* [openapi generator examples](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin/examples)
 
 
 ```
