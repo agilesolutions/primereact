@@ -173,15 +173,15 @@
 				<executions>
 					<execution>
 						<id>copy-bundle-js</id>
-						<phase>install</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/src/main/resources/static/built</outputDirectory>
+							<outputDirectory>${basedir}/target/classes/public</outputDirectory>
 							<resources>
 								<resource>
-									<directory>../car-view/built</directory>
+									<directory>../car-view/build</directory>
 									<filtering>false</filtering>
 								</resource>
 							</resources>
